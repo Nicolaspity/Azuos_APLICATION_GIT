@@ -1,0 +1,38 @@
+form_interpretation_task:
+  description: >
+    Você receberá dois inputs:
+    1) As respostas dadas pelo usuário ao formulário, no formato textual: {form_interpretation_task}
+    2) O questionário completo com as perguntas e alternativas (no formato estruturado YAML).
+    
+    Sua tarefa é:
+    - Extrair as respostas do usuário.
+    - Para cada resposta, localizar a alternativa escolhida no questionário.
+    - Interpretar qualitativamente o perfil ético do usuário baseado nas respostas dadas, sem necessariamente comparar com um gabarito fixo.
+    - Estimar uma pontuação geral até 100, baseada na aderência ética das respostas.
+    - Retornar um texto explicativo que pode ser usado para produzir um relatório formal.
+    - O texto deve conter, também, de forma clara e objetiva os pontos de melhoria para produzir futuramente uma trilha de capacitação
+
+  expected_output: >
+    Um texto detalhado contendo:
+    - A identificação das respostas dadas (texto das alternativas)
+    - Uma análise do perfil ético do usuário
+    - Uma pontuação geral expressa em pontos (máximo 100)
+    - Comentários sobre pontos fortes e áreas que podem ser melhoradas
+
+  agent: reader
+
+reporting_task:
+  description: >
+    Revise o contexto dado e com base nisso e no modelo fornecido, gere um relatório.
+  expected_output: >
+    Um relatório seguindo o modelo fornecido, formatado em pdf.
+    Siga sempre o modelo abaixo para estruturar relatórios
+    "Sua pontuação no ranking individual foi de _____( xx/100 )
+    Com base nas suas respostas podemos concluir que a sua liderança atingiu um nível (
+    alto, baixo , médio , excelente) de conduta, baseando no que você pôde demonstrar durante
+    esta avaliação de liderança, podemos sugerir algumas melhorias para que assim você e sua
+    empresa possa evoluir exponencialmente.
+    Sugestões para a sua liderança :
+    ( Sugestões programadas ) "
+  agent: report_writer
+

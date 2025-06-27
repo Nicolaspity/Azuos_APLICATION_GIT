@@ -1,0 +1,44 @@
+
+# training_track_writing_task:
+#   description: >
+#     Escreva uma trilha de capacitação completa com base na interpretação fornecida para ensinar o usuário a ser um líder melhor e capacitá-lo profissionalmente
+
+#     Sua produção deve iniciar com uma introdução breve ao tema, contextualizando o assunto para o leitor e explicando claramente todos
+#     os conceitos principais, utilizando exemplos e analogias. Seja extenso e detalhado, não poupe linhas, o texto deve fazer
+#     com que o profissional melhore eticamente.
+#     O conteúdo deve ser estruturado em PDF, utilizando títulos, subtítulos, listas e destaques para facilitar a leitura e a organização.
+
+#     Importante:
+#     Não utilize as palavras: Antiético, incompetente, inútil ou incapaz
+#   expected_output: >
+#     Uma trilha de capacitação bem estruturada e abrangente, em formato PDF, que explique o tema de forma completa e seja adequada ao público-alvo.
+#   agent: instructor
+
+topic_writing_task:
+  description: >
+    Analise o texto de entrada que interpreta o perfil ético do usuário e contém sugestões de melhoria.
+    
+    Transforme essas sugestões em uma lista de módulos bem definidos e independentes.
+    Cada módulo deve ser descrito de forma objetiva e separada para servir como unidade de geração de conteúdo posterior.
+
+    Cada módulo deve conter um título claro, uma descrição detalhada do conteúdo a ser abordado e a justificativa para sua inclusão, baseada na análise fornecida.
+
+    Estruture a resposta como uma lista de objetos, para que cada módulo possa ser utilizado em chamadas separadas ao modelo posteriormente.
+
+
+  expected_output: >
+    Uma lista JSON de módulos, onde cada módulo é um objeto com a seguinte estrutura:
+
+    [
+      {
+        "nome": "Título objetivo do módulo",
+        "descricao": "Descrição clara e detalhada do conteúdo",
+        "justificativa": "Motivo para incluir este módulo, fundamentado na análise do perfil ético"
+      },
+      ...
+    ]
+
+    A lista deve conter apenas esses objetos sem texto adicional, para facilitar o processamento automático em chamadas separadas.
+
+
+  agent: instructor
