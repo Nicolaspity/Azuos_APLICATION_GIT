@@ -6,12 +6,10 @@ from random import randint
 from pydantic import BaseModel
 from crewai.flow import Flow, listen, start
 from crewai import LLM
-from src.azuos_applied_flow.crews.content_crew.content_crew import ContentCrew
-from src.azuos_applied_flow.crews.capacitation_crew.capacitation_crew import CapacitationCrew
+from azuos_applied_flow.crews.content_crew.content_crew import ContentCrew
+from azuos_applied_flow.crews.capacitation_crew.capacitation_crew import CapacitationCrew
 from fpdf import FPDF  # Para salvar o relatório em PDF
-from flask import Flask, request, jsonify
 
-app = Flask(__name__)
 
 class ReportState(BaseModel):
     respostas: str = ""
@@ -21,17 +19,6 @@ class ReportState(BaseModel):
 
 
 class AzuosFlow(Flow[ReportState]):
-    
-    @app.route("/receber_respostas", methods=["POST"])
-    def receber_respostas():
-        data = request.get_json()
-        if not data or "respostas" not in data:
-            return jsonify({"error": "Campo 'respostas' é obrigatório"}), 400
-        respostas = data["respostas"]
-        state = ReportState()
-        flow = AzuosFlow(state=state)
-        result_state = flow.kickoff(inputs={"respostas": respostas})
-        return jsonify(result_state.dict())
 
     @start()
     def receber_respostas(self):
