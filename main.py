@@ -6,8 +6,8 @@ from random import randint
 from pydantic import BaseModel
 from crewai.flow import Flow, listen, start
 from crewai import LLM
-from azuos_applied_flow.crews.content_crew.content_crew import ContentCrew
-from azuos_applied_flow.crews.capacitation_crew.capacitation_crew import CapacitationCrew
+from src.azuos_applied_flow.crews.content_crew.content_crew import ContentCrew
+from src.azuos_applied_flow.crews.capacitation_crew.capacitation_crew import CapacitationCrew
 from fpdf import FPDF  # Para salvar o relatório em PDF
 
 class ReportState(BaseModel):
@@ -15,7 +15,6 @@ class ReportState(BaseModel):
     interpretacao: str = ""
     relatorio: str = ""
     trilha: str = ""
-    modulos: str = ""
 
 
 class AzuosFlow(Flow[ReportState]):
@@ -23,11 +22,9 @@ class AzuosFlow(Flow[ReportState]):
     @start()
     def receber_respostas(self):
         print("📩 Recebendo respostas do formulário...")
-        # Exemplo de respostas recebidas (isso pode vir via input de API, banco, etc.)
-        self.state.respostas = """
-            Pergunta 1 - Resposta dada: D
-            Pergunta 2 - Resposta dada: C
-            """
+        # Corrigido: acessa diretamente o atributo recebido pelo input
+        self.state.respostas = getattr(self, "respostas", "").strip()
+        # print("DEBUG respostas recebidas:", repr(self.state.respostas))
 
 
     @listen(receber_respostas)
@@ -119,12 +116,21 @@ class AzuosFlow(Flow[ReportState]):
             pdf.add_page()
             pdf.set_font("Arial", size=12)
 
+            def clean_text(text):
+                return (
+                    text.replace("—", "-")
+                        .replace("’", "'")
+                        .replace("“", '"')
+                        .replace("”", '"')
+                        .replace("…", "...")
+                )
+
             for line in texto.split("\n"):
-               pdf.multi_cell(0, 10, line)
+               pdf.multi_cell(0, 10, clean_text(line))
 
             pdf_path = os.path.join(output_dir, f"modulo_{idx}.pdf")
-            pdf.output(pdf_path)
-
+            pdf.output(pdf_path, 'F')
+        return self.state
 
 
 def kickoff():
