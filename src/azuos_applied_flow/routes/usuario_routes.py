@@ -25,3 +25,20 @@ def cadastrar_usuario():
     except Exception as e:
         db.session.rollback()
         return jsonify({"erro": str(e)}), 400
+
+@usuario_bp.route("/login_usuario", methods=["POST"])
+def login_usuario():
+    data = request.get_json()
+    email = data.get("email")
+    senha = data.get("senha")
+
+    if not email or not senha:
+        return jsonify({"erro": "Email e senha são obrigatórios."}), 400
+
+    usuario = Usuario.query.filter_by(email=email, senha=senha).first()
+
+    if usuario:
+        return jsonify({"mensagem": "Login realizado com sucesso!", "usuario_id": usuario.id}), 200
+    else:
+        return jsonify({"erro": "Email ou senha inválidos."}), 401
+
