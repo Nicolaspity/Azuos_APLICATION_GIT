@@ -6,8 +6,10 @@ from azuos_applied_flow.config.config import Config
 from azuos_applied_flow.models.usuario import db
 from azuos_applied_flow.routes.usuario_routes import usuario_bp
 from azuos_applied_flow.services.azuos_service import processar_kickoff
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_object(Config)
 
 db.init_app(app)
