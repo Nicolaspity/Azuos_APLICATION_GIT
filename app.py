@@ -3,12 +3,9 @@ from azuos_applied_flow.main import AzuosFlow, ReportState
 
 app = Flask(__name__)
 
-@app.route("/kickoff", methods=["GET"])
+@app.route("/kickoff", methods=["POST"])
 def kickoff():
-    data = {
-        "respostas": "Pergunta 1: D\nPergunta 2: C"
-    }
-    # data = request.get_json()
+    data = request.get_json()
     respostas = data.get("respostas", "")
 
     if not respostas:
@@ -30,4 +27,6 @@ def receber():
     print('FOI')
     return "FOI"
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
