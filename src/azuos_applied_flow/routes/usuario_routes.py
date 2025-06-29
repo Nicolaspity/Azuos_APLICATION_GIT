@@ -17,6 +17,7 @@ def cadastrar_usuario():
             empresa=data.get("empresa"),
             ramo=data.get("ramo"),
             categoria=data.get("categoria"),
+            senha=data.get("senha"),
         )
         db.session.add(usuario)
         db.session.commit()
