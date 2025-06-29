@@ -1,0 +1,6 @@
+flask
+crewai
+openai
+fpdf
+pydantic 
+gunicorn
