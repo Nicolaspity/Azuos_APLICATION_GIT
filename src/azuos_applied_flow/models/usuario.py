@@ -14,3 +14,4 @@ class Usuario(db.Model):
     empresa = db.Column(db.String(30))
     ramo = db.Column(db.String(50))
     categoria = db.Column(db.String(30))
+    senha = db.Column(db.String(255))
