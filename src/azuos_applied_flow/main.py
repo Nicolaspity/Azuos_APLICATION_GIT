@@ -6,8 +6,8 @@ from random import randint
 from pydantic import BaseModel
 from crewai.flow import Flow, listen, start
 from crewai import LLM
-from azuos_applied_flow.crews.content_crew.content_crew import ContentCrew
-from azuos_applied_flow.crews.capacitation_crew.capacitation_crew import CapacitationCrew
+from crews.content_crew.content_crew import ContentCrew
+from crews.capacitation_crew.capacitation_crew import CapacitationCrew
 from fpdf import FPDF  # Para salvar o relatório em PDF
 
 
