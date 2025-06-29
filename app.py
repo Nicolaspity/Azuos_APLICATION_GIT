@@ -7,7 +7,7 @@ from azuos_applied_flow.models.usuario import db
 from azuos_applied_flow.routes.usuario_routes import usuario_bp
 from azuos_applied_flow.services.azuos_service import processar_kickoff
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config.from_object(Config)
 
 db.init_app(app)
