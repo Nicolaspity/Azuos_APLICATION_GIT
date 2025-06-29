@@ -4,3 +4,4 @@ openai
 fpdf
 pydantic 
 gunicorn
+flask_sqlalchemy
