@@ -5,3 +5,4 @@ fpdf
 pydantic 
 gunicorn
 flask_sqlalchemy
+psycopg2
