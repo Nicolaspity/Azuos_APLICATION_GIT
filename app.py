@@ -2,7 +2,8 @@ from flask import Flask, request, jsonify
 from azuos_applied_flow.main import AzuosFlow, ReportState
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+
 
 app = Flask(__name__)
 
