@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from azuos_applied_flow.main import AzuosFlow, ReportState
+from src.azuos_applied_flow.main import AzuosFlow, ReportState
 
 app = Flask(__name__)
 
