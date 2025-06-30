@@ -19,10 +19,10 @@ app.register_blueprint(usuario_bp)
 @app.route("/kickoff", methods=["POST"])
 def kickoff():
     data = request.get_json()
-    respostas = data.get("respostas", "")
+    respostas_raw = data.get("respostas", "")
     usuario_id = data.get("usuario_id")
 
-    if not respostas:
+    if not respostas_raw:
         return jsonify({"error": "Campo 'respostas' é obrigatório"}), 400
 
     if not usuario_id:
