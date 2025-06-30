@@ -45,8 +45,8 @@ def kickoff():
             resposta=resposta
         )
         db.session.add(novo_form)
-    db.session.commit()
     processar_kickoff(respostas_raw)
+    db.session.commit()
     return jsonify({"mensagem": "Respostas salvas com sucesso"})
 
 @app.route("/receber", methods=["GET"])
