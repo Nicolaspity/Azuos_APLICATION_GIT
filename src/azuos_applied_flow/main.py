@@ -58,7 +58,7 @@ class AzuosFlow(Flow[ReportState]):
         pdf.set_font("Arial", size=12)
 
         for linha in relatorio_ajustado.split("\n"):
-            pdf.multi_cell(0, 10, linha)
+            pdf.multi_cell(0, 10, linha.replace("—", "-").replace("’", "'").replace("“", '"').replace("”", '"').replace("…", "..."))
 
         pdf.output("outputs/relatorio_final.pdf")
         print("✅ Relatório salvo em: outputs/relatorio_final.pdf")
