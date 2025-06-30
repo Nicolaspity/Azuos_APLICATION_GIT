@@ -7,6 +7,7 @@ from azuos_applied_flow.models.usuario import db
 from azuos_applied_flow.routes.usuario_routes import usuario_bp
 from azuos_applied_flow.services.azuos_service import processar_kickoff
 from flask_cors import CORS
+from azuos_applied_flow.models.form import Form
 
 app = Flask(__name__)
 CORS(app)
@@ -19,9 +20,34 @@ app.register_blueprint(usuario_bp)
 def kickoff():
     data = request.get_json()
     respostas = data.get("respostas", "")
+    usuario_id = data.get("usuario_id")
+
     if not respostas:
         return jsonify({"error": "Campo 'respostas' é obrigatório"}), 400
-    return jsonify(processar_kickoff(respostas))
+
+    if not usuario_id:
+        return jsonify({"error": "ID do usuário não enviado"}), 400
+
+    linhas = respostas_raw.strip().split("\n")
+    for linha in linhas:
+        if not linha.startswith("Pergunta "):
+            continue
+        try:
+            parte1, valor = linha.split(":")
+            pergunta_id = int(parte1.strip().split(" ")[1])
+            resposta = valor.strip()[0]
+        except Exception as e:
+            print("Erro ao processar linha: ", linha, e)
+            continue
+        novo_form = Form(
+            usuario_id=usuario_id,
+            pergunta_id=pergunta_id,
+            resposta=resposta
+        )
+        db.session.add(novo_form)
+    db.session.commit()
+    processar_kickoff(respostas_raw)
+    return jsonify({"mensagem": "Respostas salvas com sucesso"})
 
 @app.route("/receber", methods=["GET"])
 def receber():
