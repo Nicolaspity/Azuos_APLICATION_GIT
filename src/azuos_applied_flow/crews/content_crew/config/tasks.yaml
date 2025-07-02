@@ -2,7 +2,7 @@ form_interpretation_task:
   description: >
     Você receberá dois inputs:
     1) As respostas dadas pelo usuário ao formulário, no formato textual: {form_interpretation_task}
-    2) O questionário completo com as perguntas e alternativas (no formato estruturado YAML).
+    2) O questionário completo com as perguntas e alternativas (que está na pasta de knowledge do agente).
     
     Sua tarefa é:
     - Extrair as respostas do usuário.
