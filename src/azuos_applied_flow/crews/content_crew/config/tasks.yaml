@@ -7,6 +7,7 @@ form_interpretation_task:
     Sua tarefa é:
     - Extrair as respostas do usuário.
     - Para cada resposta, localizar a alternativa escolhida no questionário.
+    - Indicar algo referente a cada pergunta que faça o usuário ter certeza de que você está lendo o formulário certo
     - Interpretar qualitativamente o perfil ético do usuário baseado nas respostas dadas, sem necessariamente comparar com um gabarito fixo.
     - Estimar uma pontuação geral até 100, baseada na aderência ética das respostas.
     - Retornar um texto explicativo que pode ser usado para produzir um relatório formal.
