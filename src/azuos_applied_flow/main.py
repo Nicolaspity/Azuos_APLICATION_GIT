@@ -32,7 +32,8 @@ class AzuosFlow(Flow[ReportState]):
         print("🧠 Interpretando respostas com base no código de ética...")
 
         result = ContentCrew().crew().kickoff(
-            inputs={"form_interpretation_task": self.state.respostas}
+            inputs={"form_interpretation_task": self.state.respostas,
+                   "questionnaire": "knowledge/form_questions/form.yaml"}
         )
 
 
