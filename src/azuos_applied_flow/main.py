@@ -30,10 +30,12 @@ class AzuosFlow(Flow[ReportState]):
     @listen(receber_respostas)
     def interpretar_respostas(self):
         print("🧠 Interpretando respostas com base no código de ética...")
-
+        # Leia o conteúdo do arquivo YAML
+        with open("knowledge/form_questions/form.yaml", "r", encoding="utf-8") as f:
+            questionnaire_content = f.read()
         result = ContentCrew().crew().kickoff(
             inputs={"form_interpretation_task": self.state.respostas,
-                   "questionnaire": "knowledge/form_questions/form.yaml"}
+                   "questionnaire": questionnaire_content}
         )
 
 
