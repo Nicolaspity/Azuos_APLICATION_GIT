@@ -46,7 +46,8 @@ class AzuosFlow(Flow[ReportState]):
 
         result = ContentCrew().crew().kickoff(
             inputs={"reporting_task": self.state.interpretacao,
-                    "form_interpretation_task": self.state.respostas
+                    "form_interpretation_task": self.state.respostas,
+                    "questionnaire": "knowledge/form_questions/form.yaml"
                 }
         )
 
