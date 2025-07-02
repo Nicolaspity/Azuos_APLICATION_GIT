@@ -1,0 +1,121 @@
+questions:
+    id: 1
+    text: "Em uma situação hipotética, baseando nas suas experiências como líder, se você tivesse como definir 4 características suas, de forma honesta, você definiria:"
+    options:
+      A: "HONESTIDADE, RESPEITO, JUSTIÇA E TRANSPARÊNCIA."
+      B: "DUREZA, RESPONSABILIDADE, ESTABILIDADE E CONHECIMENTO TÉCNICO."
+      C: "HONESTIDADE, TRANSPARÊNCIA, CONFIABILIDADE E INTEGRIDADE."
+      D: "RESPONSABILIDADE, INTEGRIDADE, CONFIABILIDADE E RESPEITO."
+
+    id: 2
+    text: "Na manhã do seu expediente, chegam dois funcionários na sua sala, relatando que tiveram um conflito, com base nessa situação:"
+    options:
+      A: "Você adverte os dois funcionários e suspende os mesmos."
+      B: "Você estuda o conflito, de forma cuidadosa e advertem os funcionários de forma proporcional ao agravo"
+      C: "Você prefere estudar o caso, com cuidado, e chega a conclusão que a melhor opção é buscar uma solução pacífica de conflitos."
+      D: "Você chega a conclusão que deve imediatamente enviar ao setor de compliance e prefere não opinar sobre a questão."
+    
+    id: 3
+    text: "Na tarde do seu expediente, seu chefe chega em sua sala e diz que sua produção está parada, visto isso, ele adverte você e diz que você será cobrado, com base nessa situação você:  "
+    options:
+      A: "Vai até seus funcionários e adverte-os dizendo que a produção está baixa e que os culpados são os responsáveis pela produção. "
+      B: "Cria uma nova estratégia de abordagem para solucionar este problema. "
+      C: "Busca um novo aperfeiçoamento para a gestão de crises dentro do seu setor."
+      D: "Institui uma política de controle mais rígido e garante assim o gerenciamento de crises dentro do seu setor."
+
+    id: 4
+    text: "Qual instrumento você acredita que está de acordo com o controle empresarial de liderança?  "
+    options:
+      A: "COMPLIANCE. "
+      B: "RELATÓRIOS NUMÉRICOS DE CASOS. "
+      C: "RELATÓRIO DE OCORRÊNCIA FOCAL DE ABORDAGEM. "
+      D: "PLANO POLÍTICO ADMINISTRATIVO. "
+
+    id: 5
+    text: "Com base no código de ética, sobre LIDERANÇA,  uma situação de problemas com acessibilidade de pessoas com deficiência auditiva total, como seria sua conduta a respeito da socialização dessa pessoa com os colegas de trabalho:  "
+    options:
+      A: "Dar palestras e capacitação em LIBRAS.  "
+      B: "Contratar um tradutor de LIBRAS para a pessoa com deficiência. "
+      C: "Distribuir na empresa uma série de cartazes com as principais palavras e expressões em LIBRAS.  "
+      D: "Outra opção. " 
+      
+    id: 6
+    text: "A empresa que você trabalha  é capaz de realizar a contratação de funcionários cegos ?  "
+    options:
+      A: "Sim, pois temos atividades que este funcionário pode desenvolver.  "
+      B: "Não, o ramo comercial que atuamos atualmente não pode receber este público. "
+      C: "No momento não, pois não temos infraestrutura para a recepção desses funcionários.  "
+      D: "No momento não, e não temos previsão para adaptarmo-nos a esse público. "      
+ 
+    id: 7
+    text: "Na maioria das vezes os banheiros adaptados são uma realidade dentro das empresas, entretanto, esses geralmente estão disponíveis em locais distantes e com unidades quase que únicas, dentro de unidades grandes, fazendo assim uma situação de longo deslocamento de pessoas com deficiência de mobilidade ou qualquer outra qualificação que necessite de sanitário exclusivo. O que você trás como solução para essa problemática?  "
+    options:
+      A: "Adaptação de todos os banheiros para realizar uma inclusão eficiente.  "
+      B: "Adaptação de banheiros selecionados para garantir a acessibilidade correta. "
+      C: "Garantir a mediação entre os sanitários acessíveis conciliando a ocorrência na medida da demanda. "
+      D: "Garantir uma solução diferente das apresentadas anteriormente. "
+
+    id: 8
+    text: "O líder ético deve ser o maior defensor de toda a acessibilidade para os seus liderados, garantindo a prevenção de qualquer situação que possa gerar qualquer constrangimento aos seus liderados. Dessa forma, todos os problemas devem ser pensados e solucionados da melhor forma. Como você reagiria em uma situação de ter que dividir a liderança em mais divisões ?  "
+    options:
+      A: "Optaria por segregar a minha liderança, dividindo as funções. "
+      B: "Prefiro deixar a liderança sob o meu comando para garantir que todas as funções sejam cumpridas, pois acredito que dividir a liderança pode ocasionar lideranças ociosas e sem funções equilibradas. "
+      C: "Acredito que dividir a liderança irá fazer com que as funções sejam cumpridas de forma insuficiente. "
+      D: "Acredito que segregar a liderança deve ser uma realidade, porém sem alterar os recursos financeiros do funcionário, para garantir a minha valorização como líder. "
+
+    id: 9
+    text: "Para você, em sua liderança o que é prioridade: "
+    options:
+      A: "Bem-estar trabalhista para seus liderados. "
+      B: "Economia de recursos da empresa, uma vez que esse objetivo é um dos mais importantes e pode custar seu emprego. "
+      C: "Economia de situações-problema, criando um perfil físico de funcionários para os setores. "
+      D: "Economia de situações de conflitos, evitando funcionários com deficiência para certas funções, para que assim eles não sejam expostos. "
+
+    id: 10
+    text: "Em uma equipe recém-formada, você percebe que há conflito de ideias e disputas de ego. Qual a melhor atitude de um líder para garantir harmonia e produtividade no grupo? "
+    options:
+      A: "Realizar reuniões de alinhamento e propor mediação de conflitos com escuta ativa e empatia. "
+      B: "Impor regras rígidas para evitar conflitos e manter o foco no resultado. "
+      C: "Delegar a responsabilidade da harmonia ao RH, já que isso não é papel do líder. "
+      D: "Aplicar uma abordagem autoritária para mostrar quem tem o controle da equipe. "
+
+    id: 11
+    text: "Um colaborador constantemente entrega resultados abaixo do esperado. Como você, como líder, deve lidar com essa situação?  "
+    options:
+      A: "Promover uma conversa individual com foco no desenvolvimento, oferecendo apoio e metas claras."
+      B: "Afastar o colaborador de projetos importantes para evitar prejuízos. "
+      C: "Ignorar o problema esperando que ele se resolva com o tempo. "
+      D: "Repreender o colaborador publicamente para servir de exemplo. "
+
+    id: 12
+    text: "Em um momento de crise, qual é a postura mais eficaz de um líder frente à equipe? "
+    options:
+      A: "Ser transparente sobre a situação e envolver a equipe nas soluções. "
+      B: "Tomar decisões isoladamente e comunicar somente o necessário. "
+      C: "Aumentar a cobrança e diminuir os prazos para acelerar os resultados. "
+      D: "Transferir a responsabilidade para outros setores, pois um líder deve saber delegar funções. "
+
+    id: 13
+    text: "Como um líder pode promover a inovação dentro da equipe? "
+    options:
+      A: "Incentivando a criatividade, abrindo espaço para ideias e premiando soluções viáveis. "
+      B: "Solicitando inovações somente quando os resultados estiverem ruins. "
+      C: "Evitando mudanças para manter o padrão que já funciona. "
+      D: "Copiando estratégias de concorrentes sem consultar a equipe, uma vez que essas soluções demonstram resultados eficientes nas outras empresas. "
+
+
+    id: 14
+    text: "Em uma situação onde a empresa passa por um processo de reestruturação interna, muitos colaboradores demonstram resistência às mudanças propostas. Como líder, você nota que os níveis de engajamento estão caindo, mesmo após reuniões explicativas sobre a necessidade da reestruturação. Qual a estratégia mais eficaz para restaurar a confiança e reengajar sua equipe?"
+    options:
+      A: "Estabelecer pequenos comitês internos com membros da equipe para participar ativamente do processo de mudança, sentindo-se parte da transformação."
+      B: "Redobrar os esforços de comunicação com mais comunicados oficiais e reforço das metas a serem atingidas. "
+      C: "Conduzir avaliações individuais de desempenho para pressionar os mais resistentes a mudarem de postura."
+      D: "Realocar os colaboradores resistentes para áreas menos estratégicas, reduzindo o impacto negativo no restante da equipe. "
+
+    id: 15
+    text: "Em um ambiente de trabalho híbrido, onde parte da equipe atua presencialmente e parte remotamente, começam a surgir queixas de desigualdade no reconhecimento das contribuições. A percepção é de que os colaboradores presenciais são mais lembrados e valorizados. Como um líder que preza pela equidade deve lidar com esse desafio? "
+    options:
+      A: "Implementar práticas formais de acompanhamento de entregas com critérios objetivos para todos, independentemente da presença física."
+      B: "Criar um rodízio entre trabalho remoto e presencial, ainda que alguns colaboradores tenham limitações para essa mudança. "
+      C: "Realizar reuniões presenciais obrigatórias mensais para promover maior integração da equipe como um todo. "
+      D: "Ignorar a percepção, considerando que o desempenho será naturalmente percebido ao longo do tempo."
